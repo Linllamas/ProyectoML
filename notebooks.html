@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Metodología y Desarrollo &#8212; My sample book</title>
+    <title>Metodología y Desarrollo &#8212; ProyectoML</title>
   
   
   
@@ -406,7 +406,7 @@ document.write(`
 <p>En primer lugar, el proyecto se considera de tipo cuantitativo al ser un estudio que funciona para hacer estimaciones de las futuras calificaciones de nuevos libros en el mercado. Inicialmente se realizó un análisis exploratorio de los datos para comprenderlos, determinar patrones, identificar valores atípicos, visualizar los datos y prepararlos para la formulación de modelos. Para la limpieza de los datos, se calculó la correlación de las variables.</p>
 <p>En segundo lugar, se formularon los modelos de regresión tradicionales y por último se realizó el modelo Stacking. Este último se basa en el ensamblaje de modelos de aprendizaje automático para lograr mejores predicciones, más robustas y con menos sesgos. Para su evaluación se utilizaron métricas como ´RMSE´, que al ser cercano a 0, el modelo demuestra un ajuste perfecto y el ´R^2´, que al ser cercano a 1, el modelo indica una mayor precisión.</p>
 <div style="text-align:center;">
-  <img src="C:/Users/Linda Herrera/ProyectoML/docs/Imagenes/Stacking.png" alt="Texto alternativo" width="300px" height="200px">
+  <img src="https://github.com/Linllamas/ProyectoML/blob/main/Stacking.png?raw=true" width="300px" height="200px">
 </div></section>
 <section id="desarrollo">
 <h2>Desarrollo<a class="headerlink" href="#desarrollo" title="Permalink to this heading">#</a></h2>
@@ -1342,10 +1342,10 @@ Kurtosis:  89.52
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/d150e9a57b9fe7881afec3c879a75aa30eab0e85e616f7f33a5683ade2f68cf2.png" src="_images/d150e9a57b9fe7881afec3c879a75aa30eab0e85e616f7f33a5683ade2f68cf2.png" />
-<img alt="_images/4ae14e84f864c428225ae40f21093770e38e0d37ee5cbee8db552c2b381d6c1a.png" src="_images/4ae14e84f864c428225ae40f21093770e38e0d37ee5cbee8db552c2b381d6c1a.png" />
-<img alt="_images/825102a7b53f628814cdcce2b2d541c145935025bc37219292e88c67fe1c65ca.png" src="_images/825102a7b53f628814cdcce2b2d541c145935025bc37219292e88c67fe1c65ca.png" />
-<img alt="_images/fe9822932afd2caa4eaf1252414c5e15bf286426d399b5919c3ed3d0103ef623.png" src="_images/fe9822932afd2caa4eaf1252414c5e15bf286426d399b5919c3ed3d0103ef623.png" />
+<img alt="_images/8005c0f2f8574a39706d6943b0ab2c98dbd187b9fa2bfbbca7076bc2fde70e4f.png" src="_images/8005c0f2f8574a39706d6943b0ab2c98dbd187b9fa2bfbbca7076bc2fde70e4f.png" />
+<img alt="_images/78ece006e8a735fc8618eb3e807b6cd3dfd1fd5a01c5b2d783a5d83dc3699589.png" src="_images/78ece006e8a735fc8618eb3e807b6cd3dfd1fd5a01c5b2d783a5d83dc3699589.png" />
+<img alt="_images/6982f962e3d92388dfa0e9ae61fdddace6b2cea941f7afecf4dbf90bd8cba9ef.png" src="_images/6982f962e3d92388dfa0e9ae61fdddace6b2cea941f7afecf4dbf90bd8cba9ef.png" />
+<img alt="_images/8d2ac8d30475715d8944a4191baa54c2789b22e54578a0fac66de4e4f1d5772f.png" src="_images/8d2ac8d30475715d8944a4191baa54c2789b22e54578a0fac66de4e4f1d5772f.png" />
 </div>
 </div>
 <p>De las gráficas de análisis bivariado:</p>
@@ -1611,50 +1611,18 @@ Scores de entrenamiento:
 <span class="g g-Whitespace">    </span><span class="mi">175</span> <span class="c1"># Early termination</span>
 <span class="g g-Whitespace">    </span><span class="mi">176</span> <span class="k">if</span> <span class="n">sample_weight</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 
-<span class="nn">File C:\ProgramasML\miniconda3\envs\ml_venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:1161,</span> in <span class="ni">AdaBoostRegressor._boost</span><span class="nt">(self, iboost, X, y, sample_weight, random_state)</span>
+<span class="nn">File C:\ProgramasML\miniconda3\envs\ml_venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:1150,</span> in <span class="ni">AdaBoostRegressor._boost</span><span class="nt">(self, iboost, X, y, sample_weight, random_state)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1147</span> <span class="n">estimator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_estimator</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1149</span> <span class="c1"># Weighted sampling of the training set with replacement</span>
+<span class="ne">-&gt; </span><span class="mi">1150</span> <span class="n">bootstrap_idx</span> <span class="o">=</span> <span class="n">random_state</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1151</span>     <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">_num_samples</span><span class="p">(</span><span class="n">X</span><span class="p">)),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1152</span>     <span class="n">size</span><span class="o">=</span><span class="n">_num_samples</span><span class="p">(</span><span class="n">X</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1153</span>     <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1154</span>     <span class="n">p</span><span class="o">=</span><span class="n">sample_weight</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1155</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1157</span> <span class="c1"># Fit on the bootstrapped sample and obtain a prediction</span>
+<span class="g g-Whitespace">   </span><span class="mi">1158</span> <span class="c1"># for all samples in the training set</span>
 <span class="g g-Whitespace">   </span><span class="mi">1159</span> <span class="n">X_</span> <span class="o">=</span> <span class="n">_safe_indexing</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">bootstrap_idx</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1160</span> <span class="n">y_</span> <span class="o">=</span> <span class="n">_safe_indexing</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">bootstrap_idx</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1161</span> <span class="n">estimator</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_</span><span class="p">,</span> <span class="n">y_</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1162</span> <span class="n">y_predict</span> <span class="o">=</span> <span class="n">estimator</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1164</span> <span class="n">error_vect</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">y_predict</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span>
-
-<span class="nn">File C:\ProgramasML\miniconda3\envs\ml_venv\lib\site-packages\sklearn\base.py:1151,</span> in <span class="ni">_fit_context.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(estimator, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1144</span>     <span class="n">estimator</span><span class="o">.</span><span class="n">_validate_params</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1146</span> <span class="k">with</span> <span class="n">config_context</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1147</span>     <span class="n">skip_parameter_validation</span><span class="o">=</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1148</span>         <span class="n">prefer_skip_nested_validation</span> <span class="ow">or</span> <span class="n">global_skip_validation</span>
-<span class="g g-Whitespace">   </span><span class="mi">1149</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1150</span> <span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1151</span>     <span class="k">return</span> <span class="n">fit_method</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File C:\ProgramasML\miniconda3\envs\ml_venv\lib\site-packages\sklearn\tree\_classes.py:1320,</span> in <span class="ni">DecisionTreeRegressor.fit</span><span class="nt">(self, X, y, sample_weight, check_input)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1290</span> <span class="nd">@_fit_context</span><span class="p">(</span><span class="n">prefer_skip_nested_validation</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1291</span> <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">check_input</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1292</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Build a decision tree regressor from the training set (X, y).</span>
-<span class="g g-Whitespace">   </span><span class="mi">1293</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1294</span><span class="sd">     Parameters</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1317</span><span class="sd">         Fitted estimator.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1318</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1320</span>     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_fit</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1321</span>         <span class="n">X</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1322</span>         <span class="n">y</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1323</span>         <span class="n">sample_weight</span><span class="o">=</span><span class="n">sample_weight</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1324</span>         <span class="n">check_input</span><span class="o">=</span><span class="n">check_input</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1325</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1326</span>     <span class="k">return</span> <span class="bp">self</span>
-
-<span class="nn">File C:\ProgramasML\miniconda3\envs\ml_venv\lib\site-packages\sklearn\tree\_classes.py:443,</span> in <span class="ni">BaseDecisionTree._fit</span><span class="nt">(self, X, y, sample_weight, check_input, missing_values_in_feature_mask)</span>
-<span class="g g-Whitespace">    </span><span class="mi">432</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">433</span>     <span class="n">builder</span> <span class="o">=</span> <span class="n">BestFirstTreeBuilder</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">434</span>         <span class="n">splitter</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">435</span>         <span class="n">min_samples_split</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">440</span>         <span class="bp">self</span><span class="o">.</span><span class="n">min_impurity_decrease</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">441</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">443</span> <span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tree_</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="p">,</span> <span class="n">missing_values_in_feature_mask</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">445</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_outputs_</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">is_classifier</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">446</span>     <span class="bp">self</span><span class="o">.</span><span class="n">n_classes_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_classes_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -1775,15 +1743,13 @@ Puntuación media de entrenamiento: 0.77
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fitting 5 folds for each of 36 candidates, totalling 180 fits
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Métricas en el conjunto de prueba:
+Métricas en el conjunto de prueba:
 Error cuadrático medio (MSE): 0.00
 R-cuadrado (R2): 0.98
 
 Scores de entrenamiento:
 Fold 1: 0.98
-Fold 2: 0.98
+Fold 2: 0.97
 Fold 3: 0.98
 Fold 4: 0.98
 Fold 5: 0.98
@@ -1830,32 +1796,26 @@ Puntuación media de entrenamiento: 0.98
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Métricas en el conjunto de prueba:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error cuadrático medio (MSE): </span><span class="si">{</span><span class="n">mse_svm</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R-cuadrado (R2): </span><span class="si">{</span><span class="n">r2_svm</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># Calcular y mostrar los scores de entrenamiento</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Scores de entrenamiento:&quot;</span><span class="p">)</span>
-<span class="n">train_scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">best_model</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;r2&#39;</span><span class="p">)</span>
-<span class="n">train_scores_svm</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">train_scores</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">train_scores</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fold </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">score</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Puntuación media de entrenamiento: </span><span class="si">{</span><span class="n">train_scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fitting 5 folds for each of 12 candidates, totalling 60 fits
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Métricas en el conjunto de prueba:
-Error cuadrático medio (MSE): 0.00
-R-cuadrado (R2): 0.96
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="ne">c</span>:\ProgramasML\ProyectoML\docs\notebooks.ipynb Cell 77 line 2
+      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/ProgramasML/ProyectoML/docs/notebooks.ipynb#Y136sZmlsZQ%3D%3D?line=0&#39;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="c1"># Crear un pipeline con preprocesamiento, escalado y regresor SVM</span>
+<span class="o">----&gt;</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/ProgramasML/ProyectoML/docs/notebooks.ipynb#Y136sZmlsZQ%3D%3D?line=1&#39;</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/ProgramasML/ProyectoML/docs/notebooks.ipynb#Y136sZmlsZQ%3D%3D?line=2&#39;</span><span class="o">&gt;</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>     <span class="p">(</span><span class="s1">&#39;scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>  <span class="c1"># Escalar las características</span>
+      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/ProgramasML/ProyectoML/docs/notebooks.ipynb#Y136sZmlsZQ%3D%3D?line=3&#39;</span><span class="o">&gt;</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>     <span class="p">(</span><span class="s1">&#39;svm&#39;</span><span class="p">,</span> <span class="n">SVR</span><span class="p">())</span>  <span class="c1"># Regresor SVM</span>
+      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/ProgramasML/ProyectoML/docs/notebooks.ipynb#Y136sZmlsZQ%3D%3D?line=4&#39;</span><span class="o">&gt;</span><span class="mi">5</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="p">])</span>
+      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/ProgramasML/ProyectoML/docs/notebooks.ipynb#Y136sZmlsZQ%3D%3D?line=6&#39;</span><span class="o">&gt;</span><span class="mi">7</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="c1"># Definir el espacio de hiperparámetros para GridSearch</span>
+      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/ProgramasML/ProyectoML/docs/notebooks.ipynb#Y136sZmlsZQ%3D%3D?line=7&#39;</span><span class="o">&gt;</span><span class="mi">8</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/ProgramasML/ProyectoML/docs/notebooks.ipynb#Y136sZmlsZQ%3D%3D?line=8&#39;</span><span class="o">&gt;</span><span class="mi">9</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>     <span class="s1">&#39;svm__C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">],</span>  <span class="c1"># Parámetro de regularización C</span>
+     <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/ProgramasML/ProyectoML/docs/notebooks.ipynb#Y136sZmlsZQ%3D%3D?line=9&#39;</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>     <span class="s1">&#39;svm__kernel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="s1">&#39;rbf&#39;</span><span class="p">],</span>  <span class="c1"># Tipo de kernel (lineal o RBF)</span>
+     <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/ProgramasML/ProyectoML/docs/notebooks.ipynb#Y136sZmlsZQ%3D%3D?line=10&#39;</span><span class="o">&gt;</span><span class="mi">11</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>     <span class="s1">&#39;svm__gamma&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;scale&#39;</span><span class="p">,</span> <span class="s1">&#39;auto&#39;</span><span class="p">]</span>  <span class="c1"># Parámetro gamma (escala automática o inversa)</span>
+     <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/ProgramasML/ProyectoML/docs/notebooks.ipynb#Y136sZmlsZQ%3D%3D?line=11&#39;</span><span class="o">&gt;</span><span class="mi">12</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="p">}</span>
 
-Scores de entrenamiento:
-Fold 1: 0.97
-Fold 2: 0.97
-Fold 3: 0.97
-Fold 4: 0.95
-Fold 5: 0.97
-Puntuación media de entrenamiento: 0.96
+<span class="ne">NameError</span>: name &#39;Pipeline&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -2105,7 +2065,7 @@ Puntuación media de entrenamiento: 1.00
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book Community
+By Linda Herrera y Lisa Puche
 </p>
 
   </div>
